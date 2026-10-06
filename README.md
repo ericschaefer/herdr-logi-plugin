@@ -1,7 +1,7 @@
-# Herdr Agents for the Logitech MX Keypad
+# Herdr Agents for Logitech MX Keypad and Loupedeck
 
 Live status of your [herdr](https://herdr.dev) workspaces and coding agents on
-the MX Keypad. Press a key to jump to one.
+the MX Keypad and Loupedeck devices. Press a key to jump to one.
 
 <p align="center">
   <img src="docs/images/keypad.png" width="420"
@@ -13,16 +13,22 @@ the MX Keypad. Press a key to jump to one.
 
 - macOS
 - [herdr](https://herdr.dev) 0.8.2 or newer, running locally
-- Logi Options+ with Logi Plugin Service 6.1 or newer
-- Logitech MX Keypad
+- Logi Options+ (MX Keypad) or Loupedeck software, with Logi Plugin Service
+  6.1 or newer
+- Logitech MX Keypad, Loupedeck Live S, Loupedeck Live, or Loupedeck CT
+
+Tested on the Logitech MX Keypad and Loupedeck Live S. Loupedeck Live and CT
+are enabled by the plugin's device-family support but have not been tested.
 
 ## Install
 
 1. Download `Herdr_<version>.lplug4` from the
    [latest release](https://github.com/niklasberglund/herdr-logi-plugin/releases/latest).
-2. Double-click it. Logi Options+ installs the plugin.
-3. In Options+, select the MX Keypad, open **All actions**, and drag
-   **Herdr Agents** actions onto keys.
+2. Double-click it to install through Logi Options+ or Loupedeck software.
+3. Assign **Herdr Agents** actions to keys:
+   - **MX Keypad:** In Options+, select the MX Keypad and open **All actions**.
+   - **Loupedeck:** In Loupedeck software, select your device and profile,
+     find **Herdr Agents** in the action panel, and drag actions onto keys.
 
 ## Keys
 
@@ -65,6 +71,7 @@ a terminal. Changes apply on the next press.
 |---|---|
 | Every key shows a dark red dotted ring | herdr is not running. `herdr status` should report a running server. |
 | A press raises the wrong terminal | Set `terminalApp` as described above. |
+| A Loupedeck key keeps an old space name | Check for a saved icon/text customization. Select the action, click its icon to open the icon editor, reset the icon to its original state, and save. Repeat in each affected application profile. This also resets custom icon styling. |
 
 Log: `~/Library/Application Support/Logi/LogiPluginService/Logs/plugin_logs/Herdr.log`
 
